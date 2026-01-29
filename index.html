@@ -19,10 +19,13 @@
 
     /* NAVIGATION */
     nav {
-      text-align: center;
-      padding: 22px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 22px;
       font-size: 0.95rem;
       letter-spacing: 1px;
+      position: relative;
     }
 
     nav a {
@@ -33,6 +36,20 @@
 
     nav a:hover {
       color: #1a1a1a;
+    }
+
+    /* HAMBURGER */
+    .menu-toggle {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      position: absolute;
+      right: 22px;
+      top: 18px;
+    }
+
+    .nav-links {
+      display: flex;
     }
 
     /* HERO */
@@ -74,17 +91,11 @@
     .card h2 {
       margin-top: 0;
       font-size: 1.65rem;
-      color: #222;
     }
 
     .card h3 {
       margin-top: 0;
       font-size: 1.25rem;
-      color: #333;
-    }
-
-    .card p {
-      color: #444;
     }
 
     .verse {
@@ -110,13 +121,6 @@
       font-family: "Cinzel", serif;
       font-size: 1.6rem;
       letter-spacing: 1px;
-      margin-bottom: 18px;
-    }
-
-    .subscribe p {
-      max-width: 620px;
-      margin: 0 auto 30px;
-      color: #555;
     }
 
     .subscribe input {
@@ -127,22 +131,15 @@
       border-radius: 6px;
       border: 1px solid #ccc;
       font-family: "Crimson Pro", serif;
-      font-size: 1rem;
     }
 
     .subscribe button {
       padding: 14px 28px;
-      margin-top: 12px;
       background: #c2b58b;
       border: none;
       border-radius: 6px;
       font-family: "Cinzel", serif;
-      letter-spacing: 1px;
       cursor: pointer;
-    }
-
-    .subscribe button:hover {
-      background: #b4a777;
     }
 
     /* FOOTER */
@@ -152,16 +149,46 @@
       font-size: 0.85rem;
       color: #777;
     }
+
+    /* MOBILE STYLES */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        background: #faf8f2;
+        width: 100%;
+        left: 0;
+        padding: 20px 0;
+        border-top: 1px solid #e2e0d6;
+      }
+
+      .nav-links a {
+        margin: 12px 0;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+    }
   </style>
 </head>
 
 <body>
 
 <nav>
-  <a href="#">Home</a>
-  <a href="#devotions">Devotions</a>
-  <a href="#archive">Archive</a>
-  <a href="#about">About</a>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <div class="nav-links" id="navLinks">
+    <a href="#">Home</a>
+    <a href="#devotions">Devotions</a>
+    <a href="#archive">Archive</a>
+    <a href="#about">About</a>
+  </div>
 </nav>
 
 <header>
@@ -173,68 +200,26 @@
 </header>
 
 <section id="devotions">
-
   <div class="card">
-    <h2>Morning Prayer: Begin With Intent</h2>
-    <p>
-      Begin your day with stillness. Invite God’s presence before
-      rushing into tasks. Center your heart and align your purpose with grace.
-    </p>
-    <div class="verse">
-      “This is the day that the Lord has made.” — Psalm 118:24
-    </div>
+    <h2>Morning Prayer</h2>
+    <p>Begin your day with stillness and intention.</p>
+    <div class="verse">Psalm 118:24</div>
   </div>
-
-  <div class="card">
-    <h2>Midday Reflection: Presence in the Hours</h2>
-    <p>
-      In the middle of your day, pause. Notice where your strength comes from
-      and where your attention wanders. Pray with intention, not obligation.
-    </p>
-    <div class="verse">
-      “Be still, and know that I am God.” — Psalm 46:10
-    </div>
-  </div>
-
 </section>
 
 <section id="archive">
-
-  <h2 style="text-align:center; font-family:Cinzel, serif; letter-spacing:1px; margin-bottom:50px;">
-    Reflection Archive
-  </h2>
-
+  <h2 style="text-align:center; font-family:Cinzel, serif;">Reflection Archive</h2>
   <div class="card">
     <h3>April 6, 2026 — Faithfulness in Ordinary Days</h3>
-    <p>
-      Much of life is lived in repetition. Scripture reminds us that God often
-      works not through dramatic moments, but through steady obedience
-      practiced quietly over time.
-    </p>
+    <p>God often works through steady obedience.</p>
   </div>
-
-  <div class="card">
-    <h3>April 5, 2026 — The Quiet Strength of Discipline</h3>
-    <p>
-      Discipline forms character slowly. It teaches patience, restraint,
-      and trust in outcomes that are not immediately visible.
-    </p>
-  </div>
-
 </section>
 
 <section id="subscribe">
   <div class="subscribe">
     <h2>Daily Devotion by Email</h2>
-    <p>
-      Receive a short reflection rooted in Scripture,  
-      delivered quietly to your inbox each morning.
-    </p>
-
     <form>
-      <input type="text" placeholder="Your name">
-      <br>
-      <input type="email" placeholder="Your email address">
+      <input type="email" placeholder="Your email">
       <br>
       <button type="submit">Subscribe</button>
     </form>
@@ -244,19 +229,19 @@
 <section id="about">
   <div class="card">
     <h2>Our Purpose</h2>
-    <p>
-      This space exists to invite calm, faithful reflection —
-      helping readers reconnect with God-centered purpose,
-      discipline, and meaning in everyday life.
-    </p>
+    <p>A quiet space for faith, discipline, and reflection.</p>
   </div>
 </section>
 
 <footer>
-  © 2026 · Daily Devotions & Reflections  
-  <br>
-  Faith · Stillness · Purpose
+  © 2026 · Daily Devotions & Reflections
 </footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+  }
+</script>
 
 </body>
 </html>
