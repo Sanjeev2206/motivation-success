@@ -8,53 +8,82 @@
   <style>
     body {
       margin: 0;
-      font-family: Georgia, serif;
+      font-family: Georgia, "Times New Roman", serif;
       background-color: #020617;
       color: #e5e7eb;
-      line-height: 1.8;
+      line-height: 1.9;
     }
 
-    header {
-      padding: 90px 20px;
+    /* NAVIGATION */
+    nav {
       text-align: center;
-      background: linear-gradient(135deg, #020617, #020617);
-    }
-
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 12px;
-    }
-
-    header p {
-      max-width: 720px;
-      margin: auto;
-      font-size: 1.1rem;
+      padding: 20px 10px;
+      font-size: 0.95rem;
+      letter-spacing: 0.4px;
       opacity: 0.9;
     }
 
+    nav a {
+      margin: 0 18px;
+      color: #e5e7eb;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      opacity: 0.7;
+    }
+
+    /* HERO */
+    header {
+      padding: 110px 20px 90px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3.2rem;
+      margin-bottom: 16px;
+      letter-spacing: 0.6px;
+    }
+
+    header p {
+      max-width: 760px;
+      margin: auto;
+      font-size: 1.15rem;
+      opacity: 0.85;
+    }
+
+    /* CONTENT */
     section {
       max-width: 900px;
       margin: auto;
-      padding: 60px 20px;
+      padding: 70px 20px;
     }
 
     .post {
-      background: #020617;
+      background: rgba(255,255,255,0.025);
       border: 1px solid rgba(255,255,255,0.08);
-      padding: 30px;
-      border-radius: 14px;
-      margin-bottom: 30px;
+      padding: 42px;
+      border-radius: 18px;
+      margin-bottom: 42px;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.4);
+      backdrop-filter: blur(6px);
     }
 
     .post h2 {
       margin-top: 0;
-      font-size: 1.6rem;
+      font-size: 1.7rem;
+      letter-spacing: 0.4px;
     }
 
+    .post p {
+      opacity: 0.9;
+    }
+
+    /* FOOTER */
     footer {
       text-align: center;
-      padding: 40px 20px;
-      opacity: 0.6;
+      padding: 55px 20px;
+      opacity: 0.55;
       font-size: 0.9rem;
     }
   </style>
@@ -62,26 +91,60 @@
 
 <body>
 
+<nav>
+  <a href="#">Home</a>
+  <a href="#articles">Reflections</a>
+  <a href="#about">Purpose</a>
+</nav>
+
 <header>
   <h1>Motivation & Success</h1>
   <p>
-    For people who are tired of excuses  
-    and ready to build discipline, clarity, and real results.
+    Thoughtful reflections on discipline, purpose, and success  
+    grounded in faith, character, and quiet obedience.
   </p>
 </header>
 
-<section>
+<section id="articles">
 
   <div class="post">
-    <h2>Motivation Is Temporary. Discipline Is Permanent.</h2>
+    <h2>Faithfulness Precedes Fruitfulness</h2>
     <p>
-      Motivation fades. Discipline stays.
-      Build habits so strong that progress happens even on bad days.
+      Success is not built in moments of inspiration,  
+      but in daily faithfulness when no one is watching.  
+      Discipline is stewardship. Consistency is obedience.
     </p>
   </div>
 
   <div class="post">
-    <h2>Success Is Built in Silence</h2>
+    <h2>Work Is a Calling, Not a Shortcut</h2>
     <p>
-      No noise. No validation.
-      Just daily executi
+      Meaningful success grows from responsibility embraced,  
+      effort sustained, and purpose aligned with something greater  
+      than applause or reward.
+    </p>
+  </div>
+
+</section>
+
+<section id="about">
+  <div class="post">
+    <h2>Why This Site Exists</h2>
+    <p>
+      This space is written for readers who believe that life has meaning,  
+      work has dignity, and success must be anchored in character.
+      <br><br>
+      It is for those who value discipline over noise,  
+      faith over frenzy, and long obedience over quick wins.
+    </p>
+  </div>
+</section>
+
+<footer>
+  © 2026 · Motivation & Success  
+  <br>
+  Faith · Discipline · Purpose
+</footer>
+
+</body>
+</html>
