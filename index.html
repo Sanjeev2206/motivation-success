@@ -5,6 +5,7 @@
   <title>Daily Devotions & Reflections</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Church-style fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600&family=Cinzel:wght@600&display=swap" rel="stylesheet">
 
   <style>
@@ -16,9 +17,10 @@
       line-height: 1.9;
     }
 
+    /* NAVIGATION */
     nav {
       text-align: center;
-      padding: 18px 0;
+      padding: 22px 0;
       font-size: 0.95rem;
       letter-spacing: 1px;
     }
@@ -33,8 +35,9 @@
       color: #1a1a1a;
     }
 
+    /* HERO */
     header {
-      padding: 100px 20px 60px;
+      padding: 110px 20px 70px;
       text-align: center;
     }
 
@@ -42,28 +45,29 @@
       font-family: "Cinzel", serif;
       font-size: 3rem;
       letter-spacing: 1.5px;
-      margin-bottom: 14px;
+      margin-bottom: 16px;
     }
 
     header p {
-      max-width: 720px;
+      max-width: 760px;
       margin: auto;
       font-size: 1.1rem;
       color: #555;
     }
 
+    /* SECTIONS */
     section {
       max-width: 900px;
       margin: auto;
-      padding: 60px 20px;
+      padding: 70px 20px;
     }
 
     .card {
-      background: white;
+      background: #ffffff;
       border: 1px solid #e2e0d6;
       border-radius: 12px;
-      padding: 42px;
-      margin-bottom: 40px;
+      padding: 44px;
+      margin-bottom: 46px;
       box-shadow: 0 8px 22px rgba(0,0,0,0.06);
     }
 
@@ -71,6 +75,12 @@
       margin-top: 0;
       font-size: 1.65rem;
       color: #222;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-size: 1.25rem;
+      color: #333;
     }
 
     .card p {
@@ -86,9 +96,59 @@
       font-size: 0.95rem;
     }
 
+    /* SUBSCRIBE */
+    .subscribe {
+      text-align: center;
+      background: #ffffff;
+      border: 1px solid #e2e0d6;
+      border-radius: 12px;
+      padding: 50px;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.05);
+    }
+
+    .subscribe h2 {
+      font-family: "Cinzel", serif;
+      font-size: 1.6rem;
+      letter-spacing: 1px;
+      margin-bottom: 18px;
+    }
+
+    .subscribe p {
+      max-width: 620px;
+      margin: 0 auto 30px;
+      color: #555;
+    }
+
+    .subscribe input {
+      padding: 14px;
+      width: 260px;
+      max-width: 90%;
+      margin: 8px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-family: "Crimson Pro", serif;
+      font-size: 1rem;
+    }
+
+    .subscribe button {
+      padding: 14px 28px;
+      margin-top: 12px;
+      background: #c2b58b;
+      border: none;
+      border-radius: 6px;
+      font-family: "Cinzel", serif;
+      letter-spacing: 1px;
+      cursor: pointer;
+    }
+
+    .subscribe button:hover {
+      background: #b4a777;
+    }
+
+    /* FOOTER */
     footer {
       text-align: center;
-      padding: 60px 0;
+      padding: 70px 20px;
       font-size: 0.85rem;
       color: #777;
     }
@@ -100,14 +160,15 @@
 <nav>
   <a href="#">Home</a>
   <a href="#devotions">Devotions</a>
+  <a href="#archive">Archive</a>
   <a href="#about">About</a>
 </nav>
 
 <header>
   <h1>Daily Devotions & Reflections</h1>
   <p>
-    Calm reflections rooted in Christian faith, prayer, and soul formation  
-    for each day of life’s journey.
+    Calm reflections rooted in Christian faith, prayer,  
+    and soul formation for the quiet hours of each day.
   </p>
 </header>
 
@@ -116,11 +177,11 @@
   <div class="card">
     <h2>Morning Prayer: Begin With Intent</h2>
     <p>
-      Begin your day with a moment of stillness. Invite God’s presence before
+      Begin your day with stillness. Invite God’s presence before
       rushing into tasks. Center your heart and align your purpose with grace.
     </p>
     <div class="verse">
-      “This is the day that the Lord has made; let us rejoice and be glad in it.” — Psalm 118:24
+      “This is the day that the Lord has made.” — Psalm 118:24
     </div>
   </div>
 
@@ -137,13 +198,56 @@
 
 </section>
 
+<section id="archive">
+
+  <h2 style="text-align:center; font-family:Cinzel, serif; letter-spacing:1px; margin-bottom:50px;">
+    Reflection Archive
+  </h2>
+
+  <div class="card">
+    <h3>April 6, 2026 — Faithfulness in Ordinary Days</h3>
+    <p>
+      Much of life is lived in repetition. Scripture reminds us that God often
+      works not through dramatic moments, but through steady obedience
+      practiced quietly over time.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>April 5, 2026 — The Quiet Strength of Discipline</h3>
+    <p>
+      Discipline forms character slowly. It teaches patience, restraint,
+      and trust in outcomes that are not immediately visible.
+    </p>
+  </div>
+
+</section>
+
+<section id="subscribe">
+  <div class="subscribe">
+    <h2>Daily Devotion by Email</h2>
+    <p>
+      Receive a short reflection rooted in Scripture,  
+      delivered quietly to your inbox each morning.
+    </p>
+
+    <form>
+      <input type="text" placeholder="Your name">
+      <br>
+      <input type="email" placeholder="Your email address">
+      <br>
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
+
 <section id="about">
   <div class="card">
     <h2>Our Purpose</h2>
     <p>
-      This space exists to invite calm, authentic reflection —  
-      to help readers reconnect with faith, meaning, and God-centered purpose  
-      in the midst of everyday life.
+      This space exists to invite calm, faithful reflection —
+      helping readers reconnect with God-centered purpose,
+      discipline, and meaning in everyday life.
     </p>
   </div>
 </section>
@@ -151,7 +255,7 @@
 <footer>
   © 2026 · Daily Devotions & Reflections  
   <br>
-  Faith · Peace · Purpose
+  Faith · Stillness · Purpose
 </footer>
 
 </body>
